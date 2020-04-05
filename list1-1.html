@@ -12,13 +12,16 @@
     <div id="root">wait...</div>
     <script type="text/babel">
         let dom = document.querySelector('#root');
-        let title = "新しいタイトル";
-        let link = "http://google.com";
+        let message = "新しいメッセージです。";
+        const msg_s = {
+            fontSize:"20pt",
+            colot:"red",
+            border:"1px solid blue"
+        }
 
         let el = (
             <div>
-                <h2>{title}</h2>
-                <p><a href={link}>This is link!</a></p>
+                <p style={msg_s}>{message}</p>
             </div>
         );
         ReactDOM.render(el,dom);
